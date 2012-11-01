@@ -1,0 +1,12 @@
+<html xmlns:wb=“http://open.weibo.com/wb”>
+<head>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+{% if site.weibo_user %}
+<section>
+    <wb:follow-button uid="{{ site.weibo_user }}" type="gray_2" width="136" height="24" ></wb:follow-button>
+</section>
+{% endif %}
+
+</html>
