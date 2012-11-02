@@ -1,17 +1,24 @@
-Sina Weibo Follow Button for Octopress
+Sina Weibo Follow and Share Buttons for Octopress
 ====
 
 Description:
 ----
 This plugin adds [Sina Weibo](http://weibo.com) follow button to the Octopress sidebar.
+It also adds share button at the bottom of the blog entry.
 
 Files:
 ----
 
+To add follow button:
 Place `source/_includes/custom/asides/weibo.html` in `source/_includes/custom/asides/`.
+
+To add share button:
+Place `source/_includes/custom/post/sharing.html` in `source/_includes/custom/post/`.
 
 Configuration:
 ----
+
+To add follow button:
 
 Add `custom/asides/weibo.html` to `default_asides:` in your `_config.yml`.
 
@@ -25,10 +32,21 @@ The last part of the url (long digits after http://www.weibo.com/u/) is your use
 weibo_user: 2091903003 #user id (not user name)
 ```
 
+To add share button, edit _config.yml and add:
+
+```yaml
+# Sina Weibo
+weibo_user: 2091903003 #user id (not user name)
+weibo_share_button: true
+```
+
+Run `rake generate` since _config.yml has been changed.
+
 Example
 ----
 
-See the bottom of the sidebar at [@zlu](http://www.zlu.me).
+See [@zlu](http://www.zlu.me).  Follow button is at the bottom of the right side.  Share button is at the bottom
+of every blog entry.
 
 License
 ----
